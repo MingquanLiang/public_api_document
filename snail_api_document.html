@@ -1,0 +1,3751 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>snail_api_document</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0"><center>Table of Contents</center></h1>
+
+<p><a href="#0"><strong>介绍</strong></a>  </p>
+
+<p><a href="#1"><strong>API参考手册</strong></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1">1、各家云产商的AKSK的管理操作</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.1.1">1.1、添加某个云厂商的AKSK [AddAksk]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.1.2">1.2、删除某个AKSK [DeleteAksk]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.1.3">1.3、编辑/修改某个AKSK [EditAksk]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.1.4">1.4、查看已有的AKSK列表 [GetAkskList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.1.5">1.5、获取某个AKSK的详细信息 [GetAksk]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.1.6">1.6、导入或重新覆盖某个AKSK下的云服务资源数据 [DumpAkskResourceData]</a><br>
+&nbsp;&nbsp;&nbsp;<a href="#1.2">2、云服务器的管理操作</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.1">2.1、购买云服务器 [AddCloudServer]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.2">2.2、批量删除云服务器 [BatchDeleteCloudServer]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.3">2.3、查看已有的云服务器列表 [GetCloudServerList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.4">2.4、查看某台云服务器的详细信息 [GetCloudServer]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.5">2.5、开启一台/多台云服务器 [StartCloudServer]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.6">2.6、关闭一台/多台云服务器 [StopCloudServer]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.7">2.7、重启一台/多台云服务器 [RebootCloudServer]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.8">2.8、重装某台云服务器 [ReinstallCloudServer]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.2.9">2.9、获取某台云服务器可使用的系统镜像列表(用于重装系统) [GetCloudServerImageList]</a><br>
+&nbsp;&nbsp;&nbsp;<a href="#1.3">3、弹性IP(EIP)的管理操作</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.3.1">3.1、购买EIP [AddEip]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.3.2">3.2、批量删除一个/多个EIP [BatchDeleteEip]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.3.3">3.3、查看已有的EIP列表 [GetEipList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.3.4">3.4、查看某个EIP的详细信息 [GetEip]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.3.5">3.5、绑定某个EIP到云服务 [EipBindCloudServer]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.3.6">3.6、解绑某个EIP [EipUnbindCloudServer]</a><br>
+&nbsp;&nbsp;&nbsp;<a href="#1.4">4、共享带宽(BWS)的管理操作</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.4.1">4.1、购买BWS [AddBws]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.4.2">4.2、批量删除一个/多个BWS [BatchDeleteBws]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.4.3">4.3、查看已有的BWS列表 [GetBwsList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.4.4">4.4、查看某个BWS的详细信息 [GetBws]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.4.5">4.5、调整某个BWS的带宽 [EidtBws]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.4.6">4.6、将某个EIP绑定到BWS [BwsBindEip]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.4.7">4.7、将某个EIP从某个BWS中移除 [BwsUnbindEip]</a><br>
+&nbsp;&nbsp;&nbsp;<a href="#1.5">5、业务线(产品线)对云服务资源的统一管理操作(以标签的形式)</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.1">5.1、添加云服务器的业务线标签 [AddCloudServerLabel]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.2">5.2、添加EIP的业务线标签 [AddEipLabel]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.3">5.3、添加BWS的业务线标签 [AddBwsLabel]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.4">5.4、变更云服务器的业务线标签 [AlterCloudServerLabel]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.5">5.5、变更EIP的业务线标签 [AlterEipLabel]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.6">5.6、变更BWS的业务线标签 [AlterBwsLabel]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.7">5.7、查询业务线标签下的云服务器列表 [GetCloudServerListByLabel]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.8">5.8、查询业务线标签下的EIP列表 [GetEipListByLabel]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.5.9">5.9、查询业务线标签下的BWS列表 [GetBwsListByLabel]</a><br>
+&nbsp;&nbsp;&nbsp;<a href="#1.6">6、其它辅助的管理操作</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.6.1">6.1、查看已有的系统镜像(Image)列表 [GetImageList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.6.2">6.2、查看已有的子网(Subnet)列表 [GetSubnetList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.6.3">6.3、查看已有的链路(Line)列表 [GetLineList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.6.4">6.4、查看已有的安全组(SecurityGroup)列表 [GetSecurityGroupList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.6.5">6.5、查看已有的网卡(NetworkInterface)列表 [GetNetworkInterfaceList]</a><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.6.6">6.6、查看各家云产商可用的地区(Region) [GetRegionList]</a>  </p>
+
+<p><a href="#4"><strong>附录</strong></a><br>
+<br>
+<br></p>
+
+<h2 id='0'>介绍</h2>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>本文档主要提供云服务资源统一管理操作及其成本核算功能相关的API，接入的云服务资源包括云服务器，弹性IP和共享带宽三种。 其中，一期会接入ksyun(金山云)的云服务资源统一管理操作；二期将会实现接入qcloud(腾讯云)、aliyun(阿里云)的云服务资源，并提供资源的成本核算。</strong>
+ <br>
+ <br></p>
+
+<h2 id='1'>API参考手册</h2>
+
+<ul>
+<li><strong>各家云产商的AKSK的管理操作</strong> <br></li>
+<li><strong>云服务器的管理操作</strong> <br></li>
+<li><strong>弹性IP(EIP)的管理操作</strong> <br></li>
+<li><strong>业务线(产品线)对云服务资源的统一管理操作(以标签的形式)</strong> <br></li>
+<li><strong>其它辅助的管理操作</strong> <br>
+<br>
+<br></li>
+</ul>
+
+<h2 id='1.1'> 1. 各家云产商的AKSK的管理操作</h2>
+
+<h3 id='1.1.1'>1-1. 添加某个云厂商的AKSK [AddAksk]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AddAksk&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/vendor/api/aksk/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的名称(描述)</td>
+</tr>
+<tr>
+<td style="text-align: center">access_key_id</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的access key</td>
+</tr>
+<tr>
+<td style="text-align: center">secret_access_key</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的secret key</td>
+</tr>
+<tr>
+<td style="text-align: center">vendor_name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK属于的哪个云厂商</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意：vendor_name的有效值暂时只包括ksyun(金山云)、qcloud(腾讯云)和aliyun(阿里云)</strong></p>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/vendor/api/aksk/
+{
+    &quot;name&quot;: &quot;张三的AKSK&quot;,
+    &quot;access_key_id&quot;: &quot;AKsjaksjakjkwe3rifwrfjwf&quot;,
+    &quot;secret_access_key&quot;: &quot;OEdjkhdjakdhjakfhjkwefhjkwehfjkwehfjkwebfdf3rjkh4k==&quot;,
+    &quot;vendor_name&quot;: &quot;ksyun&quot;
+}
+
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AddAksk&amp;Version=2017-03-28
+{
+    &quot;name&quot;: &quot;张三的AKSK&quot;,
+    &quot;access_key_id&quot;: &quot;AKsjaksjakjkwe3rifwrfjwf&quot;,
+    &quot;secret_access_key&quot;: &quot;OEdjkhdjakdhjakfhjkwefhjkwehfjkwehfjkwebfdf3rjkh4k==&quot;,
+    &quot;vendor_name&quot;: &quot;ksyun&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 201 Created
+
+{
+  &quot;id&quot;: &quot;1a6ab347-6a66-4dfe-a81f-770d6eff5789&quot;,
+  &quot;name&quot;: &quot;张三的AKSK&quot;,
+  &quot;access_key_id&quot;: &quot;AKsjaksjakjkwe3rifwrfjwf&quot;,
+  &quot;secret_access_key&quot;: &quot;OEdjkhdjakdhjakfhjkwefhjkwehfjkwehfjkwebfdf3rjkh4k==&quot;,
+  &quot;vendor&quot;: &quot;94cf1d90-c2ed-4d42-ab73-b2ffa91b8c8e&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;,
+  &quot;create_user&quot;: &quot;e69200c3-82ff-4ab3-a4ce-3e787a56a9d9&quot;
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.1.2'>1-2. 删除某个AKSK [DeleteAksk]</h3>
+
+<p>注意：同时会删除由AKSK导入的资源数据</p>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=DeleteAksk&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>DELETE 127.0.0.1:8000/vendor/api/aksk/{id}/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(uuid)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+DELETE 127.0.0.1:8000/vendor/api/aksk/1a6ab347-6a66-4dfe-a81f-770d6eff5789/
+
+2) Open API Request:
+DELETE http://kog.api.ksyun.com?Action=DeleteAksk&amp;Version=2017-03-28&amp;id=1a6ab347-6a66-4dfe-a81f-770d6eff5789</code></pre></div>
+
+<div><pre><code class="language-none">Status： 204 No Content</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.1.3'>1-3. 编辑/修改某个AKSK [EditAksk]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=EditAksk&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>PATCH 127.0.0.1:8000/vendor/api/aksk/{id}/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(uuid)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">AKSK的名称(描述)</td>
+</tr>
+<tr>
+<td style="text-align: center">access_key_id</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">AKSK的access key</td>
+</tr>
+<tr>
+<td style="text-align: center">secret_access_key</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">AKSK的secret key</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request: 
+PATCH 127.0.0.1:8000/vendor/api/aksk/1a6ab347-6a66-4dfe-a81f-770d6eff5789/
+{
+    &quot;name&quot;: &quot;张三修改的AKSK&quot;
+}
+
+2) Open API Request:
+PATCH http://kog.api.ksyun.com?Action=EditAksk&amp;Version=2017-03-28
+{
+    &quot;name&quot;: &quot;张三修改的AKSK&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;id&quot;: &quot;1a6ab347-6a66-4dfe-a81f-770d6eff5789&quot;,
+  &quot;name&quot;: &quot;张三修改的AKSK&quot;,
+  &quot;access_key_id&quot;: &quot;AKsjaksjakjkwe3rifwrfjwf&quot;,
+  &quot;secret_access_key&quot;: &quot;OEdjkhdjakdhjakfhjkwefhjkwehfjkwehfjkwebfdf3rjkh4k==&quot;,
+  &quot;vendor&quot;: &quot;94cf1d90-c2ed-4d42-ab73-b2ffa91b8c8e&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;,
+  &quot;create_user&quot;: &quot;e69200c3-82ff-4ab3-a4ce-3e787a56a9d9&quot;
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.1.4'> 1-4. 查看已有的AKSK列表 [GetAkskList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetAkskList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/vendor/api/aksk/</p></li>
+<li><p><strong>Parameters【参数列表】</strong> </p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/vendor/api/aksk/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetAkskList&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 2,
+  &quot;last_page&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;73b13836-f5c5-42f7-b367-57843b07119e&quot;,
+      &quot;name&quot;: &quot;王五的AKSK&quot;,
+      &quot;access_key_id&quot;: &quot;AKsdnsacjdbfirr42dhkjdasdjwf&quot;,
+      &quot;secret_access_key&quot;: &quot;OEdjkhdjfjiolkrmvoirfnjkfnjfrjkh4k==&quot;,
+      &quot;vendor&quot;: &quot;94cf1d90-c2ed-4d42-ab73-b2ffa91b8c8e&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;,
+      &quot;create_user&quot;: &quot;e69200c3-82ff-4ab3-a4ce-3e787a56a9d9&quot;
+    },
+    {
+      &quot;id&quot;: &quot;6fbd13fb-b1f6-4078-8066-55968d52dc63&quot;,
+      &quot;name&quot;: &quot;李四的AKSK&quot;,
+      &quot;access_key_id&quot;: &quot;AKsjaksjakjieudhkjdabfkadhasdjwf&quot;,
+      &quot;secret_access_key&quot;: &quot;OEdjkhdjakdhjakfdsalkjdasklfjlkfwerfcddfdf3rjkh4k==&quot;,
+      &quot;vendor&quot;: &quot;94cf1d90-c2ed-4d42-ab73-b2ffa91b8c8e&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;,
+      &quot;create_user&quot;: &quot;e69200c3-82ff-4ab3-a4ce-3e787a56a9d9&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.1.5'>1-5. 获取某个AKSK的详细信息 [GetAksk]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetAksk&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/vendor/api/aksk/{id}/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(uuid)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/vendor/api/aksk/1a6ab347-6a66-4dfe-a81f-770d6eff5789/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetAksk&amp;Version=2017-03-28&amp;id=1a6ab347-6a66-4dfe-a81f-770d6eff5789</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;id&quot;: &quot;1a6ab347-6a66-4dfe-a81f-770d6eff5789&quot;,
+  &quot;name&quot;: &quot;张三修改的AKSK&quot;,
+  &quot;access_key_id&quot;: &quot;AKsjaksjakjkwe3rifwrfjwf&quot;,
+  &quot;secret_access_key&quot;: &quot;OEdjkhdjakdhjakfhjkwefhjkwehfjkwehfjkwebfdf3rjkh4k==&quot;,
+  &quot;vendor&quot;: &quot;94cf1d90-c2ed-4d42-ab73-b2ffa91b8c8e&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;,
+  &quot;create_user&quot;: &quot;e69200c3-82ff-4ab3-a4ce-3e787a56a9d9&quot;
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.1.6'>1-6. 导入或重新覆盖某个AKSK下的云服务资源数据 [DumpAkskResourceData]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=DumpAkskResourceData&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/vendor/api/aksk/{id}/dump_resource_data/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(uuid)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request: 
+POST 127.0.0.1:8000/vendor/api/aksk/1da999df-3cfa-419c-98c8-363046a67055/dump_resource_data/
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=DumpAkskResourceData&amp;Version=2017-03-28
+{
+    &quot;id&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;dump_status&quot;: &quot;done&quot;
+}</code></pre></div>
+
+<p><br/></p>
+
+<h2 id='1.2'> 2. 云服务器的管理操作</h2>
+
+<h3 id='1.2.1'>2-1. 购买云服务器 [AddCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AddCloudServer&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/cloud_server/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">aksk</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">region</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">各家云产商可用的地区名称</td>
+</tr>
+<tr>
+<td style="text-align: center">image</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">系统安装镜像(Image)的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">subnet</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">子网的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">security_group</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">安全组的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">instance_password</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的开机密码，最短8个字符，最长32个字符，必须包含大小写英文字符和数字</td>
+</tr>
+<tr>
+<td style="text-align: center">charge_type</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">收费方式，有效值为：Monthly(包年包月), Daily(按日月结)</td>
+</tr>
+<tr>
+<td style="text-align: center">instance_type</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">云服务器套餐类型, 对于是Ksyun的云服务器，默认是I1.1A</td>
+</tr>
+<tr>
+<td style="text-align: center">data_disk_size</td>
+<td style="text-align: center">interger</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">数据盘的大小，单位为GB，如果没有指定则为相应套餐类型最小值</td>
+</tr>
+<tr>
+<td style="text-align: center">max_count</td>
+<td style="text-align: center">interger</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">默认值为1</td>
+</tr>
+<tr>
+<td style="text-align: center">min_count</td>
+<td style="text-align: center">interger</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">默认值为1</td>
+</tr>
+<tr>
+<td style="text-align: center">purchase_time</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">只有charge_type为“Monthly”时有效，有效值范围为1~36，单位为月</td>
+</tr>
+<tr>
+<td style="text-align: center">private_ip_address</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">建议使用系统自动分配</td>
+</tr>
+<tr>
+<td style="text-align: center">instance_name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">新建的云服务器的名字</td>
+</tr>
+<tr>
+<td style="text-align: center">instance_name_suffix</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">-</td>
+</tr>
+<tr>
+<td style="text-align: center">sriov_net_support</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">标识是否开启增强联网, 默认是false</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>注意：由于各家云产商的云服务的套餐、计费方式等不尽相同，最好参照各家的云产商的云服务购买的API（目前只接入ksyun）</strong></li>
+<li><p><strong>ksyun（金山云）：https://docs.ksyun.com/read/latest/52/_book/oaRunInstances.html</strong></p></li>
+<li><p><strong>Request/Response Example【请求/响应例子】</strong></p></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/cloud_server/
+{
+    &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+    &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+    &quot;image&quot;: &quot;08af0966-8519-4dd6-9c86-299c7cd57d23&quot;,
+    &quot;subnet&quot;: &quot;5f4fd4ff-9be1-4561-918d-c79a1d5e7a76&quot;,
+    &quot;security_group&quot;: &quot;12d47bc2-8138-4e31-a7a4-b264c3ed08de&quot;,
+    &quot;instance_password&quot;: &quot;Ksyun123456&quot;,
+    &quot;charge_type&quot;: &quot;Monthly&quot;, 
+    &quot;instance_name&quot;: &quot;my-centos6&quot;, 
+    &quot;purchase_time&quot;: 1, 
+    &quot;data_disk_size&quot;: 30
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AddCloudServer&amp;Version=2017-03-28
+{
+    &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+    &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+    &quot;image&quot;: &quot;08af0966-8519-4dd6-9c86-299c7cd57d23&quot;,
+    &quot;subnet&quot;: &quot;5f4fd4ff-9be1-4561-918d-c79a1d5e7a76&quot;,
+    &quot;security_group&quot;: &quot;12d47bc2-8138-4e31-a7a4-b264c3ed08de&quot;,
+    &quot;instance_password&quot;: &quot;Ksyun123456&quot;,
+    &quot;charge_type&quot;: &quot;Monthly&quot;, 
+    &quot;instance_name&quot;: &quot;my-centos6&quot;, 
+    &quot;purchase_time&quot;: 1, 
+    &quot;data_disk_size&quot;: 30
+}
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 201 Created
+
+[
+  {
+    &quot;instance_id&quot;: &quot;70498b98-d704-4cc3-8d51-087bf47e9bf6&quot;,
+    &quot;name&quot;: &quot;my-centos6&quot;
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.2.2'>2-2. 批量删除云服务器 [BatchDeleteCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=BatchDeleteCloudServer&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/cloud_server/batch_delete/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID列表</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p><strong>本接口支持批量操作，可以删除一台或者多台云服务器</strong> </p></li>
+<li><p><strong>Request/Response Example【请求/响应例子】</strong></p></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/cloud_server/batch_delete/
+{
+    &quot;id&quot;: [
+            &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;, 
+            &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;
+        ]
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=BatchDeleteCloudServer&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [
+            &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;, 
+            &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;
+        ]
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;,
+    &quot;success&quot;: true
+  },
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.2.3'>2-3. 查看已有的云服务器列表 [GetCloudServerList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetCloudServerList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/cloud_server/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/cloud_server/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetCloudServerList&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 18,
+  &quot;last_page&quot;: false,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+      &quot;name&quot;: &quot;test-abc&quot;,
+      &quot;instance_id&quot;: &quot;ce562162-7916-4857-a3eb-8726cc29db02&quot;,
+      &quot;power_status&quot;: &quot;active&quot;,
+      &quot;os&quot;: &quot;centos-6.5&quot;,
+      &quot;cpu&quot;: 1,
+      &quot;memory&quot;: 1,
+      &quot;data_disk_size&quot;: 30,
+      &quot;data_disk_type&quot;: &quot;SSD&quot;,
+      &quot;charge_type&quot;: &quot;I1.1A&quot;,
+      &quot;private_ip&quot;: &quot;172.31.32.6&quot;,
+      &quot;image&quot;: &quot;f893edd7-dab8-4963-98c9-94ebf5b22a83&quot;,
+      &quot;subnet&quot;: &quot;5f4fd4ff-9be1-4561-918d-c79a1d5e7a76&quot;,
+      &quot;eips&quot;: [],
+      &quot;associate_eips&quot;: [],
+      &quot;network_interfaces&quot;: [
+        &quot;cec7a695-9bd1-47e1-bd71-5c4a72fdffdf&quot;
+      ],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+    ... 此处省略
+   {
+      &quot;id&quot;: &quot;53f7a4b1-a055-43e9-8bfc-92b35b31a45f&quot;,
+      &quot;name&quot;: &quot;centos-67-a&quot;,
+      &quot;instance_id&quot;: &quot;3bcbf46e-12b6-4bb4-ae10-5f942d3ca242&quot;,
+      &quot;power_status&quot;: &quot;active&quot;,
+      &quot;os&quot;: &quot;centos-6.7&quot;,
+      &quot;cpu&quot;: 2,
+      &quot;memory&quot;: 2,
+      &quot;data_disk_size&quot;: 50,
+      &quot;data_disk_type&quot;: &quot;SSD&quot;,
+      &quot;charge_type&quot;: &quot;I1.2A&quot;,
+      &quot;private_ip&quot;: &quot;172.31.32.26&quot;,
+      &quot;image&quot;: &quot;2990a197-8813-4291-809c-4a4f4836764b&quot;,
+      &quot;subnet&quot;: &quot;5f4fd4ff-9be1-4561-918d-c79a1d5e7a76&quot;,
+      &quot;eips&quot;: [
+        &quot;d0e74d05-70a5-4905-b5bc-07577b39fddf&quot;
+      ],
+      &quot;associate_eips&quot;: [
+        {
+          &quot;ip_address&quot;: &quot;10.111.84.96&quot;,
+          &quot;id&quot;: &quot;d0e74d05-70a5-4905-b5bc-07577b39fddf&quot;
+        }
+      ],
+      &quot;network_interfaces&quot;: [
+        &quot;0e4365a0-9d02-43f0-ac12-174f29cd5b4b&quot;
+      ],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.2.4'>2-4. 查看某台云服务器的详细信息 [GetCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetCloudServer&amp;Version=2017-03-28&amp;id={id}</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/cloud_server/{id}/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/cloud_server/15a13159-e5cc-4e1a-8114-b42d1ab1174b/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetCloudServer&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;id&quot;: &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+  &quot;name&quot;: &quot;test-abc&quot;,
+  &quot;instance_id&quot;: &quot;ce562162-7916-4857-a3eb-8726cc29db02&quot;,
+  &quot;power_status&quot;: &quot;active&quot;,
+  &quot;os&quot;: &quot;centos-6.5&quot;,
+  &quot;cpu&quot;: 1,
+  &quot;memory&quot;: 1,
+  &quot;data_disk_size&quot;: 30,
+  &quot;data_disk_type&quot;: &quot;SSD&quot;,
+  &quot;charge_type&quot;: &quot;I1.1A&quot;,
+  &quot;private_ip&quot;: &quot;172.31.32.6&quot;,
+  &quot;image&quot;: &quot;f893edd7-dab8-4963-98c9-94ebf5b22a83&quot;,
+  &quot;subnet&quot;: &quot;5f4fd4ff-9be1-4561-918d-c79a1d5e7a76&quot;,
+  &quot;eips&quot;: [],
+  &quot;associate_eips&quot;: [],
+  &quot;network_interfaces&quot;: [
+    &quot;cec7a695-9bd1-47e1-bd71-5c4a72fdffdf&quot;
+  ],
+  &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+  &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;
+}</code></pre></div>
+
+<h3 id='1.2.5'>2-5. 开启一台/多台云服务器 [StartCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=StartCloudServer&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/cloud_server/start/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID列表</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/cloud_server/start/
+{
+    &quot;id&quot;: [
+            &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+            &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;
+        ]
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=StartCloudServer&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [
+            &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+            &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;
+        ]
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;,
+    &quot;success&quot;: true
+  },
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<h3 id='1.2.6'>2-6. 关闭一台/多台云服务器 [StopCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=StopCloudServer&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/cloud_server/stop/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID列表</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/cloud_server/stop/
+{
+    &quot;id&quot;: [
+            &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+            &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;
+        ]
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=StopCloudServer&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [
+            &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+            &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;
+        ]
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;,
+    &quot;success&quot;: true
+  },
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<h3 id='1.2.7'>2-7. 重启一台/多台云服务器 [RebootCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=RebootCloudServer&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/cloud_server/reboot/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID列表</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/cloud_server/reboot/
+{
+    &quot;id&quot;: [
+            &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+            &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;
+        ]
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=RebootCloudServer&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [
+            &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+            &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;
+        ]
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;a42609f2-5aad-4f68-bcb4-ffc1ead39fd4&quot;,
+    &quot;success&quot;: true
+  },
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<h3 id='1.2.8'>2-8. 重装某台云服务器 [ReinstallCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=ReinstallCloudServer&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/cloud_server/{id}/reinstall_system/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">image</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">系统安装镜像(Image)的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">instance_password</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的开机密码，最短8个字符，最长32个字符，必须包含大小写英文字符和数字</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p><strong>注意: 重装系统前，当前的云服务器必须关闭</strong></p></li>
+<li><p><strong>Request/Response Example【请求/响应例子】</strong></p></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/cloud_server/15a13159-e5cc-4e1a-8114-b42d1ab1174b/reinstall_system/
+{
+    &quot;image&quot;: &quot;080da356-f800-455f-ac18-ec1519998a86&quot;,
+    &quot;instance_password&quot;: &quot;Ksyun111111&quot;
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=ReinstallCloudServer&amp;Version=2017-03-28
+{
+    &quot;image&quot;: &quot;080da356-f800-455f-ac18-ec1519998a86&quot;,
+    &quot;instance_password&quot;: &quot;Ksyun111111&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;instance_id&quot;: &quot;ce562162-7916-4857-a3eb-8726cc29db02&quot;,
+  &quot;id&quot;: &quot;15a13159-e5cc-4e1a-8114-b42d1ab1174b&quot;,
+  &quot;success&quot;: true
+}</code></pre></div>
+
+<h3 id='1.2.9'>2-9. 获取某台云服务器可使用的系统镜像列表(用于重装系统) [GetCloudServerImageList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetCloudServerImageList&amp;Version=2017-03-28&amp;id={id}</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/cloud_server/{id}/image_list/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/cloud_server/15a13159-e5cc-4e1a-8114-b42d1ab1174b/image_list/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetCloudServerImageList&amp;Version=2017-03-28&amp;id= 15a13159-e5cc-4e1a-8114-b42d1ab1174b</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 70,
+  &quot;last_page&quot;: false,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;066cdf09-1924-4aec-8f0b-372316b3ab05&quot;,
+      &quot;instance_id&quot;: &quot;89b883de-70eb-4045-aab2-0784f7758c94&quot;,
+      &quot;name&quot;: &quot;jumei_debian_7.11&quot;,
+      &quot;platform&quot;: &quot;debian-7.11&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+        ... 此处省略
+    {
+      &quot;id&quot;: &quot;21a32e1f-0a39-4938-9d37-c1bd319d8b71&quot;,
+      &quot;instance_id&quot;: &quot;a07a42d1-5ecf-450a-b997-294b7e219827&quot;,
+      &quot;name&quot;: &quot;windows-2008_x86_en_20160726&quot;,
+      &quot;platform&quot;: &quot;windows-2008&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h2 id='1.3'> 3. 弹性IP(EIP)的管理操作</h2>
+
+<h3 id='1.3.1'>3-1. 购买EIP [AddEip]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AddEip&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/eip/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">aksk</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">region</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">各家云产商可用的地区名称</td>
+</tr>
+<tr>
+<td style="text-align: center">line</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">链路(Line)的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">band_width</td>
+<td style="text-align: center">interger</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">带宽</td>
+</tr>
+<tr>
+<td style="text-align: center">charge_type</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">计费方式，有效值为：Monthly(包年包月), Daily(按日月结), Peak(按峰值月结)</td>
+</tr>
+<tr>
+<td style="text-align: center">purchase_time</td>
+<td style="text-align: center">interger</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">购买时间</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意：<br>
+1） 对于ksyun的EIP，计费方式：包年包月Monthly，有到期时间，只能升带宽。按峰值月结Peak，无到期时间，可升降带宽。按日月结Daily，无到期时间，可升降带宽。<br>
+2）对于ksyun的EIP，当charge<em>type为“Monthly”时，purchase</em>time为必要参数，单位为月</strong></p>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/eip/
+{
+    &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+    &quot;line&quot;: &quot;149e5b28-e708-4b59-9203-e813e8a6d2c6&quot;,
+    &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+    &quot;band_width&quot;: 1,
+    &quot;charge_type&quot;: &quot;Daily&quot;
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AddEip&amp;Version=2017-03-28
+{
+    &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+    &quot;line&quot;: &quot;149e5b28-e708-4b59-9203-e813e8a6d2c6&quot;,
+    &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+    &quot;band_width&quot;: 1,
+    &quot;charge_type&quot;: &quot;Daily&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 201 Created
+
+{
+  &quot;id&quot;: &quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;,
+  &quot;instance_id&quot;: &quot;d25538d7-deee-464d-8c31-c43b3cb1b769&quot;,
+  &quot;ip_address&quot;: &quot;3.4.5.152&quot;,
+  &quot;band_width&quot;: 1,
+  &quot;line&quot;: &quot;149e5b28-e708-4b59-9203-e813e8a6d2c6&quot;,
+  &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+  &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.3.2'>3-2. 批量删除一个/多个EIP [BatchDeleteEip]</h3>
+
+<ul>
+<li><p><strong>注意 对于ksyun的EIP，如果EIP是绑定状态需要在删除之前进行解绑</strong></p></li>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=BatchDeleteEip&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/eip/batch_delete/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID列表</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/eip/batch_delete/
+{
+    &quot;id&quot;: [&quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;]  
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=BatchDeleteEip&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [&quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;]  
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.3.3'>3-3. 查看已有的EIP列表 [GetEipList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetEipList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/eip/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/eip/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetEipList&amp;Version=2017-03-28
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 12,
+  &quot;last_page&quot;: false,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;,
+      &quot;instance_id&quot;: &quot;d25538d7-deee-464d-8c31-c43b3cb1b769&quot;,
+      &quot;ip_address&quot;: &quot;3.4.5.152&quot;,
+      &quot;band_width&quot;: 1,
+      &quot;line&quot;: &quot;149e5b28-e708-4b59-9203-e813e8a6d2c6&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+    ...此处省略
+    {
+      &quot;id&quot;: &quot;489a1f03-17ec-4a57-9e2e-dc379d070305&quot;,
+      &quot;instance_id&quot;: &quot;7bc0dea3-e225-4499-9af4-0885ec8e799d&quot;,
+      &quot;ip_address&quot;: &quot;10.111.85.67&quot;,
+      &quot;band_width&quot;: 2,
+      &quot;line&quot;: &quot;c6588382-706d-4a87-9a50-64bc26e6872e&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.3.4'>3-4. 查看某个EIP的详细信息 [GetEip]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetEip&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/eip/{id}/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/eip/a3729998-d87e-4c86-b586-5d4da190f401/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetEip&amp;Version=2017-03-28&amp;id=a3729998-d87e-4c86-b586-5d4da190f401
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;id&quot;: &quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;,
+  &quot;instance_id&quot;: &quot;d25538d7-deee-464d-8c31-c43b3cb1b769&quot;,
+  &quot;ip_address&quot;: &quot;3.4.5.152&quot;,
+  &quot;band_width&quot;: 1,
+  &quot;line&quot;: &quot;149e5b28-e708-4b59-9203-e813e8a6d2c6&quot;,
+  &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+  &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.3.5'>3-5. 绑定某个EIP到云服务 [EipBindCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=EipBindCloudServer&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/eip/{id}/associate_cloud_server/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">cloud_server</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">network_interface</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">网卡的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/eip/a3729998-d87e-4c86-b586-5d4da190f401/associate_cloud_server/
+{
+    &quot;cloud_server&quot;: &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;, 
+    &quot;network_interface&quot;: &quot;3add1793-32bd-404a-b765-64af95e598cf&quot;
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=EipBindCloudServer&amp;Version=2017-03-28
+{
+    &quot;cloud_server&quot;: &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;, 
+    &quot;network_interface&quot;: &quot;3add1793-32bd-404a-b765-64af95e598cf&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;id&quot;: &quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;,
+  &quot;success&quot;: true,
+  &quot;reason: &quot;OK&quot;
+}</code></pre></div>
+
+<p><br></p>
+
+<h3 id='1.3.6'>3-6. 解绑某个EIP [EipUnbindCloudServer]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=EipUnbindCloudServer&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/eip/{id}/disassociate_cloud_server/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/eip/a3729998-d87e-4c86-b586-5d4da190f401/disassociate_cloud_server/
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=EipUnbindCloudServer&amp;Version=2017-03-28
+{
+    &quot;id&quot;: &quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;
+}
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;reason&quot;: &quot;OK&quot;,
+  &quot;id&quot;: &quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;,
+  &quot;success&quot;: true
+}</code></pre></div>
+
+<p><br></p>
+
+<h2 id='1.4'> 4. 共享带宽(BWS)的管理操作</h2>
+
+<h3 id='1.4.1'>4-1. 购买BWS [AddBws]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AddBws&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/bws/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">aksk</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">AKSK的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">region</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">各家云产商可用的地区名称</td>
+</tr>
+<tr>
+<td style="text-align: center">line</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">链路(Line)的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">BWS的名称</td>
+</tr>
+<tr>
+<td style="text-align: center">band_width</td>
+<td style="text-align: center">interger</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">带宽</td>
+</tr>
+<tr>
+<td style="text-align: center">charge_type</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">计费方式，有效值为：Daily(按日月结), Peak(按峰值月结)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意：<br>
+1） 对于ksyun的BWS，计费方式：共享带宽的计费类型，按峰值月结Peak，无到期时间，可以升配，可以降配（带宽）按日月结Daily，无到期时间，可以升配，可以降配。&#39;
+2）对于ksyun的BWS，其带宽的值为1-15000</strong></p>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/bws/
+{
+    &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;, 
+    &quot;line&quot;: &quot;183426b4-385d-4b5e-8561-e04e527a1b96&quot;, 
+    &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+    &quot;name&quot;: &quot;new-add-bws&quot;,
+    &quot;band_width&quot;: 2,
+    &quot;charge_type&quot;: &quot;Daily&quot;
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AddBws&amp;Version=2017-03-28
+{
+    &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;, 
+    &quot;line&quot;: &quot;183426b4-385d-4b5e-8561-e04e527a1b96&quot;, 
+    &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+    &quot;name&quot;: &quot;new-add-bws&quot;,
+    &quot;band_width&quot;: 2,
+    &quot;charge_type&quot;: &quot;Daily&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 201 Created
+
+{
+  &quot;id&quot;: &quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;,
+  &quot;instance_id&quot;: &quot;99038405-653a-4980-a011-9ad875b05c3c&quot;,
+  &quot;band_width&quot;: 2,
+  &quot;associate_eips&quot;: [],
+  &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+  &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.4.2'>4-2. 批量删除一个/多个BWS [BatchDeleteBws]</h3>
+
+<ul>
+<li><p><strong>注意：对于ksyun的BWS，在删除之前，需要确保当前的BWS没有绑定EIP，否则需要先解绑</strong></p></li>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=BatchDeleteBws&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/bws/batch_delete/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">BWS的ID列表</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/bws/batch_delete/
+{
+    &quot;id&quot;: [&quot;6c7ca940-8c69-441d-9550-1215ef29512f&quot;]
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=BatchDeleteBws&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [&quot;6c7ca940-8c69-441d-9550-1215ef29512f&quot;]
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;6c7ca940-8c69-441d-9550-1215ef29512f&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.4.3'>4-3. 查看已有的BWS列表 [GetBwsList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetBwsList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/bws/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/bws/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetBwsList&amp;Version=2017-03-28
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 4,
+  &quot;last_page&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;,
+      &quot;name&quot;: &quot;new-add-bws&quot;,
+      &quot;instance_id&quot;: &quot;99038405-653a-4980-a011-9ad875b05c3c&quot;,
+      &quot;band_width&quot;: 2,
+      &quot;associate_eips&quot;: [],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+    {
+      &quot;id&quot;: &quot;41c96b21-5185-4dc4-8329-1fd2bd957932&quot;,
+      &quot;name&quot;: &quot;qqqq&quot;,
+      &quot;instance_id&quot;: &quot;3845a830-fa8d-4e3a-8cd0-61188af97dce&quot;,
+      &quot;band_width&quot;: 1,
+      &quot;associate_eips&quot;: [],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+    {
+      &quot;id&quot;: &quot;6c7ca940-8c69-441d-9550-1215ef29512f&quot;,
+      &quot;name&quot;: &quot;bws_test_2&quot;,
+      &quot;instance_id&quot;: &quot;ccabad02-3460-48e8-ab65-c802b4d2483b&quot;,
+      &quot;band_width&quot;: 1,
+      &quot;associate_eips&quot;: [
+        {
+          &quot;ip_address&quot;: &quot;10.144.254.193&quot;,
+          &quot;id&quot;: &quot;9f22bcfa-c379-4231-bf54-7fc8510953b4&quot;
+        }
+      ],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+    {
+      &quot;id&quot;: &quot;861bff92-f744-493e-aa7c-5d2e8ae8c1f1&quot;,
+      &quot;name&quot;: &quot;bws_test&quot;,
+      &quot;instance_id&quot;: &quot;28efa16e-eaae-401a-94dc-db058e34d982&quot;,
+      &quot;band_width&quot;: 3,
+      &quot;associate_eips&quot;: [],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.4.4'>4-4. 查看某个BWS的详细信息 [GetBws]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetBws&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/bws/{id}/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">BWS的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/bws/bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetBws&amp;Version=2017-03-28&amp;id=bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;id&quot;: &quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;,
+  &quot;name&quot;: &quot;new-add-bws&quot;,
+  &quot;instance_id&quot;: &quot;99038405-653a-4980-a011-9ad875b05c3c&quot;,
+  &quot;band_width&quot;: 2,
+  &quot;associate_eips&quot;: [],
+  &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+  &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.4.5'>4-5. 调整某个BWS的带宽 [EditBws]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=EditBws&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>PATCH 127.0.0.1:8000/cmdb/api/bws/{id}/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">band_width</td>
+<td style="text-align: center">interger</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">带宽</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+PATCH 127.0.0.1:8000/cmdb/api/eip/a3729998-d87e-4c86-b586-5d4da190f401/
+{
+    &quot;band_width&quot;: 3
+}
+
+2) Open API Request:
+PATCH http://kog.api.ksyun.com?Action=EditBws&amp;Version=2017-03-28
+{
+    &quot;band_width&quot;: 3
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;id&quot;: &quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;,
+  &quot;name&quot;: &quot;new-add-bws&quot;,
+  &quot;instance_id&quot;: &quot;99038405-653a-4980-a011-9ad875b05c3c&quot;,
+  &quot;band_width&quot;: 3,
+  &quot;associate_eips&quot;: [],
+  &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+  &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+  &quot;vendor_name&quot;: &quot;ksyun&quot;
+}</code></pre></div>
+
+<p><br></p>
+
+<h3 id='1.4.6'>4-6. 将某个EIP绑定到BWS [BwsBindEip]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=BwsBindEip&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/bws/{id}/add_eip/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">BWS的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">eip</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/bws/6c7ca940-8c69-441d-9550-1215ef29512f/add_eip/
+{
+    &quot;eip&quot;: &quot;9f22bcfa-c379-4231-bf54-7fc8510953b4&quot;
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=BwsBindEip&amp;Version=2017-03-28
+{
+    &quot;id&quot;: &quot;6c7ca940-8c69-441d-9550-1215ef29512f&quot;,
+    &quot;eip&quot;: &quot;9f22bcfa-c379-4231-bf54-7fc8510953b4&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;reason&quot;: &quot;OK&quot;,
+  &quot;id&quot;: &quot;6c7ca940-8c69-441d-9550-1215ef29512f&quot;,
+  &quot;success&quot;: true
+}</code></pre></div>
+
+<p><br></p>
+
+<h3 id='1.4.7'>4-7. 将某个EIP从某个BWS中移除 [BwsUnbindEip]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=BwsUnbindEip&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/eip/{id}/delete_eip/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">BWS的ID</td>
+</tr>
+<tr>
+<td style="text-align: center">eip</td>
+<td style="text-align: center">string(UUID)</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/bws/6c7ca940-8c69-441d-9550-1215ef29512f/delete_eip/
+{
+    &quot;eip&quot;: &quot;9f22bcfa-c379-4231-bf54-7fc8510953b4&quot;
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=BwsUnbindEip&amp;Version=2017-03-28
+{
+    &quot;id&quot;: &quot;6c7ca940-8c69-441d-9550-1215ef29512f&quot;,
+    &quot;eip&quot;: &quot;9f22bcfa-c379-4231-bf54-7fc8510953b4&quot;
+}
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;reason&quot;: &quot;OK&quot;,
+  &quot;id&quot;: &quot;6c7ca940-8c69-441d-9550-1215ef29512f&quot;,
+  &quot;success&quot;: true
+}</code></pre></div>
+
+<p><br></p>
+
+<h2 id='1.5'> 5. 业务线(产品线)对云服务资源的统一管理操作(以标签的形式)</h2>
+
+<h3 id='1.5.1'>5-1. 添加云服务器的业务线标签 [AddCloudServerLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AddCloudServerLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/cloud_server/add_entity_label/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID列表</td>
+</tr>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/cloud_server/add_entity_label/
+{
+    &quot;id&quot;: [
+        &quot;2042c6d2-b905-449b-ba9e-a7f021171c4c&quot;, 
+        &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;
+        ],
+    &quot;name&quot;: &quot;projcet_name&quot;
+    
+}
+
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AddCloudServerLabel&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [
+        &quot;2042c6d2-b905-449b-ba9e-a7f021171c4c&quot;, 
+        &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;
+        ],
+    &quot;name&quot;: &quot;projcet_name&quot;
+    
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;2042c6d2-b905-449b-ba9e-a7f021171c4c&quot;,
+    &quot;success&quot;: true
+  },
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.5.2'>5-2. 添加EIP的业务线标签 [AddEipLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AddEipLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/eip/add_entity_label/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID列表</td>
+</tr>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/eip/add_entity_label/
+{
+    &quot;id&quot;: [
+        &quot;3226bac8-3e8d-464a-a953-d7168f3e598d&quot;,
+        &quot;46bc7904-4e86-4d29-8a40-eb4d5b05725b&quot;, 
+        &quot;489a1f03-17ec-4a57-9e2e-dc379d070305&quot;, 
+        &quot;8450b1cc-d6eb-4149-ae0c-2f8da68e8353&quot;, 
+        &quot;975c54de-027b-4316-b593-aaa755451dc0&quot;, 
+        &quot;9f22bcfa-c379-4231-bf54-7fc8510953b4&quot;, 
+        &quot;bc5c275d-742b-4849-8f84-3923049dc15c&quot;, 
+        &quot;d0e74d05-70a5-4905-b5bc-07577b39fddf&quot;, 
+        &quot;d248ad08-2c44-4269-aa4a-5a1a6f7ae7af&quot;, 
+        &quot;d5be54ed-d4ea-42e5-b319-60b5d52061bb&quot;, 
+        &quot;d8619d4e-5da8-43a8-b474-d312cf9e9a59&quot;, 
+        &quot;f420fe09-9201-4449-b26c-802cfda1405b&quot;
+    ],
+    &quot;name&quot;: &quot;project-A&quot;
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AddEipLabel&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [
+        &quot;3226bac8-3e8d-464a-a953-d7168f3e598d&quot;,
+        &quot;46bc7904-4e86-4d29-8a40-eb4d5b05725b&quot;, 
+        &quot;489a1f03-17ec-4a57-9e2e-dc379d070305&quot;, 
+        &quot;8450b1cc-d6eb-4149-ae0c-2f8da68e8353&quot;, 
+        &quot;975c54de-027b-4316-b593-aaa755451dc0&quot;, 
+        &quot;9f22bcfa-c379-4231-bf54-7fc8510953b4&quot;, 
+        &quot;bc5c275d-742b-4849-8f84-3923049dc15c&quot;, 
+        &quot;d0e74d05-70a5-4905-b5bc-07577b39fddf&quot;, 
+        &quot;d248ad08-2c44-4269-aa4a-5a1a6f7ae7af&quot;, 
+        &quot;d5be54ed-d4ea-42e5-b319-60b5d52061bb&quot;, 
+        &quot;d8619d4e-5da8-43a8-b474-d312cf9e9a59&quot;, 
+        &quot;f420fe09-9201-4449-b26c-802cfda1405b&quot;
+    ],
+    &quot;name&quot;: &quot;project-A&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;9f22bcfa-c379-4231-bf54-7fc8510953b4&quot;,
+    &quot;success&quot;: true
+  },
+  ... 此处省略
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;f420fe09-9201-4449-b26c-802cfda1405b&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.5.3'>5-3. 添加BWS的业务线标签 [AddBwsLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AddBwsLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/bws/add_entity_label/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">BWS的ID列表</td>
+</tr>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/bws/add_entity_label/
+{
+    &quot;id&quot;: [&quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;],
+    &quot;name&quot;: &quot;project abc&quot;
+}
+
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AddBwsLabel&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [&quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;],
+    &quot;name&quot;: &quot;project abc&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.5.4'>5-4. 变更云服务器的业务线标签 [AlterCloudServerLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AlterCloudServerLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/cloud_server/alter_entity_label/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">云服务器的ID列表</td>
+</tr>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/cloud_server/alter_entity_label/
+{
+    &quot;id&quot;: [
+        &quot;2042c6d2-b905-449b-ba9e-a7f021171c4c&quot;, 
+        &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;
+        ],
+    &quot;name&quot;: &quot;projcet_xxx&quot;
+}
+
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AlterCloudServerLabel&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [
+        &quot;2042c6d2-b905-449b-ba9e-a7f021171c4c&quot;, 
+        &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;
+        ],
+    &quot;name&quot;: &quot;projcet_xxx&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;2042c6d2-b905-449b-ba9e-a7f021171c4c&quot;,
+    &quot;success&quot;: true
+  },
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.5.5'>5-5. 变更EIP的业务线标签 [AlterEipLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AlterEipLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/eip/alter_entity_label/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">EIP的ID列表</td>
+</tr>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/eip/alter_entity_label/
+{
+    &quot;id&quot;: [
+        &quot;3226bac8-3e8d-464a-a953-d7168f3e598d&quot;],
+    &quot;name&quot;: &quot;project-haha&quot;
+}
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AlterEipLabel&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [
+        &quot;3226bac8-3e8d-464a-a953-d7168f3e598d&quot;],
+    &quot;name&quot;: &quot;project-haha&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;3226bac8-3e8d-464a-a953-d7168f3e598d&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.5.6'>5-6. 变更BWS的业务线标签 [AlterBwsLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=AlterBwsLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/bws/alter_entity_label/</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">id</td>
+<td style="text-align: center">list</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">BWS的ID列表</td>
+</tr>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+POST 127.0.0.1:8000/cmdb/api/bws/alter_entity_label/
+{
+    &quot;id&quot;: [&quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;],
+    &quot;name&quot;: &quot;new project name&quot;
+}
+
+
+2) Open API Request:
+POST http://kog.api.ksyun.com?Action=AlterBwsLabel&amp;Version=2017-03-28
+{
+    &quot;id&quot;: [&quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;],
+    &quot;name&quot;: &quot;new project name&quot;
+}</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+[
+  {
+    &quot;reason&quot;: &quot;OK&quot;,
+    &quot;id&quot;: &quot;bbdd3cfc-f85a-40cf-8ce9-9d595fc51e26&quot;,
+    &quot;success&quot;: true
+  }
+]</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.5.7'>5-7. 查询业务线标签下的云服务器列表 [GetCloudServerListByLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetCloudServerListByLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/eip/get_entity_list_by_label/?name={name}</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/cloud_server/get_entity_list_by_label/?name=projcet_xxx
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetCloudServerListByLabel&amp;Version=2017-03-28&amp;name=projcet_xxx</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 2,
+  &quot;last_page&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;2042c6d2-b905-449b-ba9e-a7f021171c4c&quot;,
+      &quot;name&quot;: &quot;my-centos&quot;,
+      &quot;instance_id&quot;: &quot;c964da91-1ebc-4888-85d9-68e7be676c4b&quot;,
+      &quot;power_status&quot;: &quot;active&quot;,
+      &quot;os&quot;: &quot;centos-6.5&quot;,
+      &quot;cpu&quot;: 1,
+      &quot;memory&quot;: 1,
+      &quot;data_disk_size&quot;: 0,
+      &quot;data_disk_type&quot;: &quot;SSD&quot;,
+      &quot;charge_type&quot;: &quot;I1.1A&quot;,
+      &quot;private_ip&quot;: &quot;172.31.32.12&quot;,
+      &quot;image&quot;: &quot;08af0966-8519-4dd6-9c86-299c7cd57d23&quot;,
+      &quot;subnet&quot;: &quot;5f4fd4ff-9be1-4561-918d-c79a1d5e7a76&quot;,
+      &quot;eips&quot;: [],
+      &quot;associate_eips&quot;: [],
+      &quot;network_interfaces&quot;: [
+        &quot;6090b0ac-5551-4154-80a9-73ed7f2557cf&quot;
+      ],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+    {
+      &quot;id&quot;: &quot;f2620604-81b8-4d25-9c70-e8bac9de5582&quot;,
+      &quot;name&quot;: &quot;my-centos6&quot;,
+      &quot;instance_id&quot;: &quot;70498b98-d704-4cc3-8d51-087bf47e9bf6&quot;,
+      &quot;power_status&quot;: &quot;active&quot;,
+      &quot;os&quot;: &quot;centos-6.5&quot;,
+      &quot;cpu&quot;: 1,
+      &quot;memory&quot;: 1,
+      &quot;data_disk_size&quot;: 0,
+      &quot;data_disk_type&quot;: &quot;SSD&quot;,
+      &quot;charge_type&quot;: &quot;I1.1A&quot;,
+      &quot;private_ip&quot;: &quot;172.31.32.37&quot;,
+      &quot;image&quot;: &quot;08af0966-8519-4dd6-9c86-299c7cd57d23&quot;,
+      &quot;subnet&quot;: &quot;5f4fd4ff-9be1-4561-918d-c79a1d5e7a76&quot;,
+      &quot;eips&quot;: [
+        &quot;a3729998-d87e-4c86-b586-5d4da190f401&quot;
+      ],
+      &quot;associate_eips&quot;: [],
+      &quot;network_interfaces&quot;: [
+        &quot;3add1793-32bd-404a-b765-64af95e598cf&quot;
+      ],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.5.8'>5-8. 查询业务线标签下的EIP列表 [GetEipListByLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetEipListByLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/eip/get_entity_list_by_label/?name={name}</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/eip/get_entity_list_by_label/?name=project-A
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetEipListByLabel&amp;Version=2017-03-28&amp;name=project-A
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 11,
+  &quot;last_page&quot;: false,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;46bc7904-4e86-4d29-8a40-eb4d5b05725b&quot;,
+      &quot;instance_id&quot;: &quot;3a5de9d1-c5a4-4459-8cff-96879cea8c53&quot;,
+      &quot;ip_address&quot;: &quot;10.111.84.124&quot;,
+      &quot;band_width&quot;: 2,
+      &quot;line&quot;: &quot;c6588382-706d-4a87-9a50-64bc26e6872e&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+    ...此处省略
+    {
+      &quot;id&quot;: &quot;d8619d4e-5da8-43a8-b474-d312cf9e9a59&quot;,
+      &quot;instance_id&quot;: &quot;5b897054-2f1c-47c1-a45a-ba07ea94bd4c&quot;,
+      &quot;ip_address&quot;: &quot;10.111.84.67&quot;,
+      &quot;band_width&quot;: 2,
+      &quot;line&quot;: &quot;c6588382-706d-4a87-9a50-64bc26e6872e&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.5.6'>5-9. 查询业务线标签下的BWS列表 [GetBwsListByLabel]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetBwsListByLabel&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>POST 127.0.0.1:8000/cmdb/api/bws/get_entity_list_by_label/?name={name}</p></li>
+<li><p><strong>Parameters【参数列表】</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">是</td>
+<td style="text-align: center">业务线标识</td>
+</tr>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/bws/get_entity_list_by_label/?name=sasa
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetBwsListByLabel&amp;Version=2017-03-28&amp;name=sasa
+</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 0,
+  &quot;last_page&quot;: true,
+  &quot;data&quot;: []
+}</code></pre></div>
+
+<p><br/></p>
+
+<h2 id='1.6'> 6. 其它辅助的管理操作</h2>
+
+<h3 id='1.6.1'> 6-1. 查看已有的镜像列表 [GetImageList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetImageList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/image/</p></li>
+<li><p><strong>Parameters【参数列表】</strong> </p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/image/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetImageList&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 70,
+  &quot;last_page&quot;: false,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;066cdf09-1924-4aec-8f0b-372316b3ab05&quot;,
+      &quot;instance_id&quot;: &quot;89b883de-70eb-4045-aab2-0784f7758c94&quot;,
+      &quot;name&quot;: &quot;jumei_debian_7.11&quot;,
+      &quot;platform&quot;: &quot;debian-7.11&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+          ... 此处省略
+    {
+      &quot;id&quot;: &quot;21a32e1f-0a39-4938-9d37-c1bd319d8b71&quot;,
+      &quot;instance_id&quot;: &quot;a07a42d1-5ecf-450a-b997-294b7e219827&quot;,
+      &quot;name&quot;: &quot;windows-2008_x86_en_20160726&quot;,
+      &quot;platform&quot;: &quot;windows-2008&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.6.2'> 6-2. 查看已有的子网(Subnet)列表 [GetSubnetList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetSubnetList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/subnet/</p></li>
+<li><p><strong>Parameters【参数列表】</strong> </p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/subnet/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetSubnetList&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 5,
+  &quot;last_page&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;1969d95b-fc87-4c3c-8a74-4a3058804110&quot;,
+      &quot;instance_id&quot;: &quot;98053d59-1326-4bde-904e-6505d091e5ae&quot;,
+      &quot;name&quot;: &quot;Subnet2&quot;,
+      &quot;subnet_type&quot;: &quot;Normal&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+        ... 此处省略
+    {
+      &quot;id&quot;: &quot;e9e47bf3-61d3-47fc-aa5d-7dad62d13f2a&quot;,
+      &quot;instance_id&quot;: &quot;c28eb0af-f5e5-43cd-8b32-16073fcd54b1&quot;,
+      &quot;name&quot;: &quot;终端子网&quot;,
+      &quot;subnet_type&quot;: &quot;Reserve&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.6.3'> 6-3. 查看已有的链路(Line)列表 [GetLineList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetLineList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/line/</p></li>
+<li><p><strong>Parameters【参数列表】</strong> </p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/line/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetLineList&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 9,
+  &quot;last_page&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;149e5b28-e708-4b59-9203-e813e8a6d2c6&quot;,
+      &quot;instance_id&quot;: &quot;8bb4238b-209e-4d62-9af3-36fb1fb8e9ca&quot;,
+      &quot;name&quot;: &quot;BGP&quot;,
+      &quot;line_type&quot;: &quot;Public&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+        ... 此处省略
+    {
+      &quot;id&quot;: &quot;c7a03f57-57fb-4045-b922-535ce9cea549&quot;,
+      &quot;instance_id&quot;: &quot;1e4ac9e7-6c0c-4ff7-93cd-c736be6969f2&quot;,
+      &quot;name&quot;: &quot;tmp-test-xie-0308&quot;,
+      &quot;line_type&quot;: &quot;Public&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.6.4'> 6-4. 查看已有的安全组(SecurityGroup)列表 [GetSecurityGroupList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetSecurityGroupList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/security_group/</p></li>
+<li><p><strong>Parameters【参数列表】</strong> </p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/security_group/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetSecurityGroupList&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 2,
+  &quot;last_page&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;12d47bc2-8138-4e31-a7a4-b264c3ed08de&quot;,
+      &quot;instance_id&quot;: &quot;ae40962e-96b3-4307-85c3-0451104e7267&quot;,
+      &quot;name&quot;: &quot;金山&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+    {
+      &quot;id&quot;: &quot;6b72cfae-d5e1-4995-9ea9-acc51279278a&quot;,
+      &quot;instance_id&quot;: &quot;3366ef91-81d4-411d-aac9-d8fbdb2edf76&quot;,
+      &quot;name&quot;: &quot;DefaultSG&quot;,
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.6.5'> 6-5. 查看已有的网卡(NetworkInterface)列表 [GetNetworkInterfaceList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetNetworkInterfaceList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/cmdb/api/network_interface/</p></li>
+<li><p><strong>Parameters【参数列表】</strong> </p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">page_size</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">每页显示多少条数据，默认是10，最大值是100</td>
+</tr>
+<tr>
+<td style="text-align: center">page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">否</td>
+<td style="text-align: center">查询第几页，默认值为1。当page为0时则返回全部的数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/cmdb/api/network_interface/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetNetworkInterfaceList&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;total_count&quot;: 21,
+  &quot;last_page&quot;: false,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;0283ce0a-2fa5-4d88-9b71-e89f9d0ccd73&quot;,
+      &quot;instance_id&quot;: &quot;81bfdb28-ece9-4c01-a8c6-37e6b12c7c98&quot;,
+      &quot;network_interface_type&quot;: &quot;primary&quot;,
+      &quot;mac_address&quot;: &quot;fa:16:3e:3d:ca:4d&quot;,
+      &quot;security_groups&quot;: [
+        &quot;12d47bc2-8138-4e31-a7a4-b264c3ed08de&quot;
+      ],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    },
+       ... 此处省略
+    {
+      &quot;id&quot;: &quot;b16774e9-dddd-4c69-8b62-62ce81289d51&quot;,
+      &quot;instance_id&quot;: &quot;521e21ee-60aa-4270-a618-b2737594a17c&quot;,
+      &quot;network_interface_type&quot;: &quot;primary&quot;,
+      &quot;mac_address&quot;: &quot;fa:16:3e:05:a8:b8&quot;,
+      &quot;security_groups&quot;: [
+        &quot;12d47bc2-8138-4e31-a7a4-b264c3ed08de&quot;
+      ],
+      &quot;region&quot;: &quot;cn-shanghai-3&quot;,
+      &quot;aksk&quot;: &quot;1da999df-3cfa-419c-98c8-363046a67055&quot;,
+      &quot;vendor_name&quot;: &quot;ksyun&quot;
+    }
+  ]
+}</code></pre></div>
+
+<p><br/></p>
+
+<h3 id='1.6.6'> 6-6. 查看各家云产商可用的地区(Region) [GetRegionList]</h3>
+
+<ul>
+<li><p><strong>Open API</strong></p>
+
+<p>Action=GetRegionList&amp;Version=2017-03-28</p></li>
+<li><p><strong>API</strong> </p>
+
+<p>GET 127.0.0.1:8000/vendor/api/region/</p></li>
+<li><p><strong>Parameters【参数列表】</strong> </p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">参数名称</th>
+<th style="text-align: center">参数类型</th>
+<th style="text-align: center">是否必要</th>
+<th style="text-align: center">参数说明</th>
+</tr>
+</thead>
+
+<tbody>
+</tbody>
+</table>
+
+<p>暂无</p>
+
+<ul>
+<li><strong>Request/Response Example【请求/响应例子】</strong></li>
+</ul>
+
+<div><pre><code class="language-none">1) API Request:
+GET 127.0.0.1:8000/vendor/api/region/
+
+2) Open API Request:
+GET http://kog.api.ksyun.com?Action=GetRegionList&amp;Version=2017-03-28</code></pre></div>
+
+<div><pre><code class="language-none">Status： 200 OK
+
+{
+  &quot;ksyun&quot;: [
+    &quot;cn-beijing-6&quot;,
+    &quot;cn-beijing-2&quot;
+  ],
+  &quot;aliyun&quot;: [],
+  &quot;qcloud&quot;: []
+}</code></pre></div>
+
+<p><br/></p>
+
+<hr>
+
+<hr>
+
+<h2 id='4'>附录</h2>
+
+<p>暂无</p>
+
+
+
+
+</body>
+
+</html>
