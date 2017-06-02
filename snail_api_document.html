@@ -384,6 +384,7 @@ kbd {
 &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="#1.6.6">6.6、查看各家云产商可用的地区(Region) [GetRegionList]</a>  </p>
 
 <p><a href="#4"><strong>附录</strong></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.1">附录A-错误信息</a>
 <br>
 <br></p>
 
@@ -3741,7 +3742,73 @@ GET http://kog.api.ksyun.com?Action=GetRegionList&amp;Version=2017-03-28</code><
 
 <h2 id='4'>附录</h2>
 
-<p>暂无</p>
+<h3 id='4.1'>附录A-错误信息</h3>
+
+<p>调用接口失败，不会返回结果数据；HTTP请求返回一个4xx或5xx的HTTP状态码，返回的HTTP消息体中包含具体的错误代码(code)及错误信息(message)等信息。</p>
+
+<p>错误信息会以json格式进行返回，eg：</p>
+
+<div><pre><code class="language-none">{
+  &quot;RequestId&quot;: &quot;36fa40a1-b983-4bef-8f19-34c30530e9b7&quot;,
+  &quot;Error&quot;: {
+    &quot;Data&quot;: null,
+    &quot;Message&quot;: &quot;Lack of Required Parameter: &#39;\&quot;u&#39;vendor_name&#39;\&quot;&#39;&quot;,
+    &quot;Code&quot;: &quot;LackRequiredParameterError&quot;,
+    &quot;Type&quot;: &quot;Response&quot;
+  }
+}</code></pre></div>
+
+<p><strong>公共错误</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">错误代码(Code)</th>
+<th style="text-align: center">错误消息(Message)</th>
+<th style="text-align: center">HTTP状态码</th>
+<th style="text-align: center">中文描述(语义)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">LackRequiredParameterError</td>
+<td style="text-align: center">Lack of Required Parameter: %s</td>
+<td style="text-align: center">400</td>
+<td style="text-align: center">请求缺少必要的参数</td>
+</tr>
+<tr>
+<td style="text-align: center">InputParameterTypeError</td>
+<td style="text-align: center">An invalid or out-of-range value for parameter: %s</td>
+<td style="text-align: center">400</td>
+<td style="text-align: center">输入的参数类型错误或不是有效值</td>
+</tr>
+<tr>
+<td style="text-align: center">ServiceAccessNotImplementedError</td>
+<td style="text-align: center">Target access service is still in progress: %s</td>
+<td style="text-align: center">503</td>
+<td style="text-align: center">标识访问的云厂商服务还没接入完成</td>
+</tr>
+<tr>
+<td style="text-align: center">InvalidQueryParameter</td>
+<td style="text-align: center">Query instance does not exist: %s</td>
+<td style="text-align: center">400</td>
+<td style="text-align: center">没有找到相应的实例</td>
+</tr>
+<tr>
+<td style="text-align: center">KscoreClientError</td>
+<td style="text-align: center">Call Kscore Client Error</td>
+<td style="text-align: center">400</td>
+<td style="text-align: center">调用ksyun服务出错</td>
+</tr>
+<tr>
+<td style="text-align: center">Exception</td>
+<td style="text-align: center">%s</td>
+<td style="text-align: center">500</td>
+<td style="text-align: center">未知的异常</td>
+</tr>
+</tbody>
+</table>
 
 
 

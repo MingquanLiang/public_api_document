@@ -55,6 +55,7 @@
 &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;[6.6、查看各家云产商可用的地区(Region) [GetRegionList]](#1.6.6)  
 
 [**附录**](#4)  
+&nbsp;&nbsp;&nbsp;&nbsp;[附录A-错误信息](#4.1)
 <br>
 <br>
 
@@ -2548,5 +2549,32 @@ Status： 200 OK
 ---
 
 <h2 id='4'>附录</h2>
-暂无
+<h3 id='4.1'>附录A-错误信息</h3>
+
+调用接口失败，不会返回结果数据；HTTP请求返回一个4xx或5xx的HTTP状态码，返回的HTTP消息体中包含具体的错误代码(code)及错误信息(message)等信息。
+
+错误信息会以json格式进行返回，eg：
+
+``` 
+{
+  "RequestId": "36fa40a1-b983-4bef-8f19-34c30530e9b7",
+  "Error": {
+    "Data": null,
+    "Message": "Lack of Required Parameter: '\"u'vendor_name'\"'",
+    "Code": "LackRequiredParameterError",
+    "Type": "Response"
+  }
+}
+```
+
+**公共错误**
+
+| 错误代码(Code)  | 错误消息(Message)  | HTTP状态码 | 中文描述(语义)
+|:-------------:|:---------------:| :-------------:|:-------------:|
+| LackRequiredParameterError      | Lack of Required Parameter: %s |  400 | 请求缺少必要的参数 |
+| InputParameterTypeError      | An invalid or out-of-range value for parameter: %s |  400 | 输入的参数类型错误或不是有效值 |
+| ServiceAccessNotImplementedError      | Target access service is still in progress: %s |  503 | 标识访问的云厂商服务还没接入完成 |
+| InvalidQueryParameter      | Query instance does not exist: %s |  400 | 没有找到相应的实例 |
+| KscoreClientError      | Call Kscore Client Error |  400 | 调用ksyun服务出错 |
+| Exception      | %s |  500 | 未知的异常 |
 
